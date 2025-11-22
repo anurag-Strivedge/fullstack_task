@@ -1,0 +1,235 @@
+.sidebar {
+  width: 350px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  transition: width 0.3s ease;
+}
+
+.sidebar.expanded {
+  width: 800px;
+}
+
+.sidebar-left {
+  width: 310px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-right {
+  flex: 1;
+  animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.greeting-card,
+.view-toggle-card,
+.feedback-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.greeting-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.greeting-text h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.greeting-text p {
+  margin: 4px 0 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.view-toggle-card h3,
+.feedback-card h3 {
+  margin: 0 0 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.toggle-buttons {
+  display: flex;
+  gap: 0;
+  background: #e8ecf1;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.toggle-btn.active {
+  background: #7dd3c0;
+  color: #1a1a1a;
+}
+
+.toggle-btn:hover:not(.active) {
+  background: rgba(125, 211, 192, 0.2);
+}
+
+.feedback-btn {
+  width: 100%;
+  padding: 14px 24px;
+  background: #7dd3c0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.feedback-btn:hover {
+  background: #6ac4b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(125, 211, 192, 0.3);
+}
+
+/* Feedback Form Card */
+.feedback-form-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+}
+
+.feedback-form-card h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.feedback-subtitle {
+  margin: 0 0 24px;
+  font-size: 14px;
+  color: #666;
+}
+
+.inline-feedback-form .form-group {
+  margin-bottom: 18px;
+}
+
+.inline-feedback-form .form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.inline-feedback-form input,
+.inline-feedback-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background: #f8f9fa;
+}
+
+.inline-feedback-form input:focus,
+.inline-feedback-form textarea:focus {
+  outline: none;
+  border-color: #7dd3c0;
+  background: white;
+}
+
+.inline-feedback-form input.error,
+.inline-feedback-form textarea.error {
+  border-color: #ff6b6b;
+}
+
+.inline-feedback-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.inline-feedback-form .error-message {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #ff6b6b;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.submit-feedback-btn,
+.cancel-feedback-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-feedback-btn {
+  background: #7dd3c0;
+  color: #1a1a1a;
+}
+
+.submit-feedback-btn:hover {
+  background: #6ac4b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(125, 211, 192, 0.3);
+}
+
+.cancel-feedback-btn {
+  background: #e8ecf1;
+  color: #666;
+}
+
+.cancel-feedback-btn:hover {
+  background: #d5dbe3;
+  color: #1a1a1a;
+}
